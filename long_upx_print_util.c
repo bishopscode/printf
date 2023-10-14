@@ -1,15 +1,16 @@
 #include "main.h"
+
 /**
- * prtloct - prints long decimal number in octal
- * @arguments: input number
+ * prtlupx - prints a long decimal in hexadecimal
+ * @arguments: The character to print
  * @buff: buffer pointer
  * @ibuff: index for buffer pointer
- * Return: number of chars printed.
+ * Return: number of chars printed
  */
-int prtloct(va_list arguments, char *buff, unsigned int ibuff)
+int prtlupx(va_list arguments, char *buff, unsigned int ibuff)
 {
 	long int int_input, i, isnegative, count, first_digit;
-	char *octal, *binary;
+	char *hexadecimal, *binary;
 
 	int_input = va_arg(arguments, long int);
 	isnegative = 0;
@@ -26,19 +27,19 @@ int prtloct(va_list arguments, char *buff, unsigned int ibuff)
 
 	binary = malloc(sizeof(char) * (64 + 1));
 	binary = load_binary_conv(binary, int_input, isnegative, 64);
-	octal = malloc(sizeof(char) * (22 + 1));
-	octal = load_long_oct_conv(binary, octal);
-	for (first_digit = i = count = 0; octal[i]; i++)
+	hexadecimal = malloc(sizeof(char) * (16 + 1));
+	hexadecimal = load_hex_conv(binary, hexadecimal, 1, 16);
+	for (first_digit = i = count = 0; hexadecimal[i]; i++)
 	{
-		if (octal[i] != '0' && first_digit == 0)
+		if (hexadecimal[i] != '0' && first_digit == 0)
 			first_digit = 1;
 		if (first_digit)
 		{
-			ibuff = com_buff(buff, octal[i], ibuff);
+			ibuff = com_buff(buff, hexadecimal[i], ibuff);
 			count++;
 		}
 	}
 	free(binary);
-	free(octal);
+	free(hexadecimal);
 	return (count);
 }
