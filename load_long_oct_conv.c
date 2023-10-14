@@ -1,27 +1,27 @@
 #include "main.h"
 
 /**
- * load_long_oct_number - the calculation of a long octal number
+ * load_long_oct_conv - the calculation of a long octal number
  *
  * @bin: arr where is stored the binary.
  * @octal: arr where is stored the octal.
  *
  * Return: bin array.
  */
-char *load_long_oct_number(char *bin, char *octal)
+char *load_long_oct_conv(char *bin, char *octal)
 {
-	int og, b, k, ioctal, lmt;
+	int og, i, j, ioctal, lmt;
 
 	octal[22] = '\0';
-	for (b = 63, ioctal = 21; b >= 0; b--, ioctal--)
+	for (i = 63, ioctal = 21; i >= 0; i--, ioctal--)
 	{
-		if (b > 0)
+		if (i > 0)
 			lmt = 4;
 		else
 			lmt = 1;
-		for (og = 0, j = 1; j <= lmt; k *= 2, b--)
-			og = ((bin[b] - '0') * k) + og;
-		b++;
+		for (og = 0, j = 1; j <= lmt; j *= 2, i--)
+			og = ((bin[i] - '0') * j) + og;
+		i++;
 		octal[ioctal] = og + '0';
 	}
 	return (octal);

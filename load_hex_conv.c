@@ -2,7 +2,6 @@
 
 /**
  * load_hex_conv - writes the character c to stdout
- *
  * @bin: the array that is stored in binary.
  * @hex: the array that is stored in hexadecimal.
  * @isupp: integer that determines if hexadecimal array is
@@ -10,24 +9,24 @@
  * @lmt: the size of hex
  * Return: binary array.
  */
-char *load_hex_number(char *bin, char *hex, int intab, int lmt)
+char *load_hex_conv(char *bin, char *hex, int isupp, int lmt)
 {
-	int og, b, k, alphabet;
+	int og, i, j, alphabet;
 
 	hex[lmt] = '\0';
 	if (isupp)
 		alphabet = 55;
 	else
 		alphabet = 87;
-	for (b = (lmt * 4) - 1; b >= 0; b--)
+	for (i = (lmt * 4) - 1; i >= 0; i--)
 	{
-		for (og = 0, k = 1; k <= 8; k *= 2, b--)
-			og = ((bin[b] - '0') * k) + og;
+		for (og = 0, j = 1; j <= 8; j *= 2, i--)
+			og = ((bin[i] - '0') * j) + og;
 		b++;
 		if (og < 10)
-			hex[b / 4] = og + 48;
+			hex[i / 4] = og + 48;
 		else
-			hex[b / 4] = og + alphabet;
+			hex[i / 4] = og + alphabet;
 	}
 	return (hex);
 }

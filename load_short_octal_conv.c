@@ -1,27 +1,26 @@
 #include "main.h"
 
 /**
- * load_short_octal_print - the calculation of a short octal number
- *
- * @bin: array that is stored in the binary.
+ * load_short_octal_conv - the calculation of a short octal number
+ * @bin: arr that is stored in the binary.
  * @octal: the array that is stored in the octal.
  *
  * Return: bin array.
  */
-char *load_short_octal_print(char *bin, char *octal)
+char *load_short_octal_conv(char *bin, char *octal)
 {
-	int og, b, k, ioctal, lmt;
+	int og, i, j, ioctal, lmt;
 
 	octal[6] = '\0';
-	for (b = 15, ioctal = 5; b >= 0; b--, ioctal--)
+	for (i = 15, ioctal = 5; i >= 0; i--, ioctal--)
 	{
-		if (b > 0)
+		if (i > 0)
 			lmt = 4;
 		else
 			lmt = 1;
-		for (og = 0, k = 1; k <= lmt; k *= 2, b--)
-			og = ((bin[b] - '0') * k) + og;
-		b++;
+		for (og = 0, j = 1; j <= lmt; j *= 2, i--)
+			og = ((bin[i] - '0') * j) + og;
+		i++;
 		octal[ioctal] = og + '0';
 	}
 	return (octal);
