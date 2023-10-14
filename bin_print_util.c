@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_bnr - prints decimal in binary
+ * bin_print_util - prints decimal in binary
  * @arguments: input string
- * @buf: buffer pointer
- * @ibuf: index for buffer pointer
+ * @buff: buffer pointer
+ * @ibuff: index for buffer pointer
  * Return: number of chars printed.
  */
-int print_bnr(va_list arguments, char *buf, unsigned int ibuf)
+int print_bin(va_list arguments, char *buff, unsigned int ibuff)
 {
 	int int_input, count, i, first_one, isnegative;
 	char *binary;
@@ -16,7 +16,7 @@ int print_bnr(va_list arguments, char *buf, unsigned int ibuf)
 	isnegative = 0;
 	if (int_input == 0)
 	{
-		ibuf = handl_buf(buf, '0', ibuf);
+		ibuff = com_buff(buff, '0', ibuff);
 		return (1);
 	}
 	if (int_input < 0)
@@ -25,7 +25,7 @@ int print_bnr(va_list arguments, char *buf, unsigned int ibuf)
 		isnegative = 1;
 	}
 	binary = malloc(sizeof(char) * (32 + 1));
-	binary = fill_binary_array(binary, int_input, isnegative, 32);
+	binary = load_binary_conv(binary, int_input, isnegative, 32);
 	first_one = 0;
 	for (count = i = 0; binary[i]; i++)
 	{
@@ -33,7 +33,7 @@ int print_bnr(va_list arguments, char *buf, unsigned int ibuf)
 			first_one = 1;
 		if (first_one == 1)
 		{
-			ibuf = handl_buf(buf, binary[i], ibuf);
+			ibuff = com_buff(buff, binary[i], ibuff);
 			count++;
 		}
 	}
