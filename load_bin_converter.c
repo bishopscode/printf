@@ -17,7 +17,7 @@ char load_ binary_conv(char *binary, long int int_input, int isnegative, int lmt
 	binary[lmt] = '\0';
 	for (i = lmt - 1; int_input > 1; i--)
 	{
-		if (int_in == 2)
+		if (int_input == 2)
 			binary[i] = '0';
 		else
 			binary[i] = (int_input % 2) + '0';
