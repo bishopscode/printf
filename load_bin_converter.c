@@ -31,7 +31,7 @@ char load_ binary_conv(char *binary, long int int_input, int isnegative, int lmt
 			if (binary[i] == '0')
 				binary[i] = '1';
 			else
-				binar[i] = '0';
+				binary[i] = '0';
 	}
 	return (binary);
 }
