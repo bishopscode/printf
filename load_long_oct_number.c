@@ -3,8 +3,8 @@
 /**
  * load_long_oct_number - the calculation of a long octal number
  *
- * @bin: array where is stored the binary.
- * @octal: array where is stored the octal.
+ * @bin: arr where is stored the binary.
+ * @octal: arr where is stored the octal.
  *
  * Return: bin array.
  */
