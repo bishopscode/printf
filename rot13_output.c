@@ -20,7 +20,7 @@ int print_rot(va_list arguments, char *buff, unsigned int ibuff)
 	if (str == NULL)
 	{
 		for (i = 0; nill[i]; i++)
-			ibuff = _buff(buff, nill[i], ibuff);
+			ibuff = com_buff(buff, nill[i], ibuff);
 		return (6);
 	}
 	for (i = 0; str[i]; i++)
