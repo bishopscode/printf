@@ -35,7 +35,7 @@ int prthhex(va_list arguments, char *buff, unsigned int ibuff)
 			first_digit = 1;
 		if (first_digit)
 		{
-			ibuff = conm_buff(buff, hexadecimal[i], ibuff);
+			ibuff = com_buff(buff, hexadecimal[i], ibuff);
 			count++;
 		}
 	}
