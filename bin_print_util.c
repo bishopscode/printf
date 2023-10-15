@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * bin_print_util - prints decimal in binary
+ * print_bin- prints decimal in binary
  * @arguments: input string
  * @buff: buffer pointer
  * @ibuff: index for buffer pointer

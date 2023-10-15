@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * char_print_util - writes the character c to stdout
+ * print_char -  writes the character c to stdout
  * @arguments: input char
  * @buff: buffer pointer
  * @ibuff: index for buffer pointer
