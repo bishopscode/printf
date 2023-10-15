@@ -7,7 +7,7 @@
  * @ibuff: index for buffer pointer
  * Return: number of chars printed.
  */
-int prthoct(va_list arguments, char *buff, unsigned int ibuff)
+int prthoct(va_list arguments, char *buf, unsigned int ibuf)
 {
 	short int int_input, i, isnegative, count, first_digit;
 	char *octal, *binary;
