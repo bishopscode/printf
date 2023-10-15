@@ -22,7 +22,7 @@ char *load_hex_conv(char *bin, char *hex, int isupp, int lmt)
 	{
 		for (og = 0, j = 1; j <= 8; j *= 2, i--)
 			og = ((bin[i] - '0') * j) + og;
-		b++;
+		i++;
 		if (og < 10)
 			hex[i / 4] = og + 48;
 		else
