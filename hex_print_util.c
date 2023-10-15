@@ -2,8 +2,8 @@
 /**
  * hex_print_util - prints a decimal in hexadecimal
  * @arguments: input string
- * @buf: buffer pointer
- * @ibuf: index for buffer pointer
+ * @buff: buffer pointer
+ * @ibuff: index for buffer pointer
  * Return: number of chars printed
  */
 int print_hex(va_list arguments, char *buff, unsigned int ibuff)
