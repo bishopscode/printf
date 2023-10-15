@@ -4,7 +4,7 @@
  * com_buff - concatenates the buffer characters
  * @buff: buffer pointer
  * @c: charcter to concatenate
- * @ibuf: index of buffer pointer
+ * @ibuff: index of buffer pointer
  * Return: index of buffer pointer.
  */
 unsigned int com_buff(char *buff, char c, unsigned int ibuff)
