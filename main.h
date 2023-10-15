@@ -55,7 +55,7 @@ int print_buff(char *buff, unsigned int nbuff);
 char *load_binary_conv(char *binary, long int int_in, int isnegative, int lmt);
 char *load_octal_conv(char *bin, char *oct);
 char *load_long_oct_conv(char *bin, char *oct);
-char *load_short_oct_conv(char *bin, char *oct);
+char *load_short_octal_conv(char *bin, char *oct);
 char *load_hex_conv(char *bin, char *hex, int isupp, int lmt);
 
 #endif
