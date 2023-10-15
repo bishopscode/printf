@@ -21,7 +21,7 @@ int prtpint(va_list arguments, char *buff, unsigned int ibuff)
 	else
 	{
 		int_in = int_input;
-		ibuff = com_buff(buf, '+', ibuff);
+		ibuff = com_buff(buff, '+', ibuff);
 	}
 	int_temp = int_in;
 	div = 1;
