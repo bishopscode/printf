@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * str_print_util - writes the string to stdout
+ * print_str - writes the string to stdout
  * @arguments: input string
  * @buff: buffer pointer
  * @ibuff: index for buffer pointer

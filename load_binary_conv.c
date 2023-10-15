@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * load_binary_cov - prints decimal in binary
+ * load_binary_conv - prints decimal in binary
  * @binary: pointer to binary
  * @int_in: input number
  * @isnegative: if input number is negative
