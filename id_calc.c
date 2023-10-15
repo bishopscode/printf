@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * id_calc - returns the amount of identifiers.
+ * id_print_func - returns the amount of identifiers.
  * @s: argument indentifier
  * @index: index of argument identifier.
  * Return: amount of identifiers.
