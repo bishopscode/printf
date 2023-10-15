@@ -27,7 +27,7 @@ char *load_short_octal_print(char *bin, char *octal);
 int (*fetch_print_func(const char *s, int index))(va_list, char *, unsigned int);
 char *load_short_octal_print(char *bin, char *octal);
 int print_addr(va_list arguments, char *buff, unsigned int ibuff);
-int print_prog(va_list a __attribute__((unused)), char *buf, unsigned int i);
+int print_prog(va_list a __attribute__((unused)), char *buff, unsigned int i);
 int _printf(const char *format, ...);
 unsigned int com_buff(char *buff, char c, unsigned int ibuff);
 int print_buff(char *buff, unsigned int nbuff);
@@ -37,7 +37,6 @@ int id_print_func(const char *s, int index);
 int prtpint(va_list arguments, char *buff, unsigned int ibuff);
 int print_int(va_list arguments, char *buff, unsigned int ibuff); 
 char *load_hex_conv(char *bin, char *hex, int isupp, int lmt);
-char *load_hex_number(char *bin, char *hex, int isupp, int lmt);
 char *load_long_oct_conv(char *bin, char *octal);
 char *load_short_octal_conv(char *bin, char *octal);
 int prtlhex(va_list arguments, char *buff, unsigned int ibuff);`
