@@ -7,7 +7,7 @@
  * @ibuff: index for buffer pointer
  * Return: number of chars printed
  */
-int pritnhex(va_list arguments, char *buff, unsigned int ibuff)
+int prtnhex(va_list arguments, char *buff, unsigned int ibuff)
 {
 	int int_input, i, isnegative, count, first_digit;
 	char *hexadecimal, *binary;
@@ -16,7 +16,7 @@ int pritnhex(va_list arguments, char *buff, unsigned int ibuff)
 	isnegative = 0;
 	if (int_input == 0)
 	{
-		ibuff = com_buff(buff, '0', ibuff);
+		ibuff = com_buf(buff, '0', ibuff);
 		return (1);
 	}
 	if (int_input < 0)
@@ -24,8 +24,8 @@ int pritnhex(va_list arguments, char *buff, unsigned int ibuff)
 		int_input = (int_input * -1) - 1;
 		isnegative = 1;
 	}
-	ibuff = com_buff(buff, '0', ibuff);
-	ibuff = com_buff(buff, 'x', ibuff);
+	ibuf = com_buff(buff, '0', ibuff);
+	ibuf = com_buff(buff, 'x', ibuff);
 	binary = malloc(sizeof(char) * (32 + 1));
 	binary = load_binary_conv(binary, int_input, isnegative, 32);
 	hexadecimal = malloc(sizeof(char) * (8 + 1));
