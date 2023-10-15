@@ -35,24 +35,24 @@ int (*fetch_print_func(const char *s, int index))(va_list, char *, unsigned int)
 		{"+ i", prtpint}, {"+ d", prtpint},
 		{" %", print_prog}, {NULL, NULL},
 	};
-	int b = 0, k = 0, whole_index;
+	int i= 0, j = 0, first_index;
 
-	whole_index = index;
-	while (pr[b].type_arg)
+	first_index = index;
+	while (pr[i].type_arg)
 	{
-		if (s[index] == pr[b].type_arg[k])
+		if (s[index] == pr[i].type_arg[j])
 		{
-			if (pr[b].type_arg[k + 1] != '\0')
-				index++, k++;
+			if (pr[i].type_arg[j + 1] != '\0')
+				index++, j++;
 			else
 				break;
 		}
 		else
 		{
-			k = 0;
+			i = 0;
 			i++;
-			index = whole_index;
+			index = first_index;
 		}
 	}
-	return (pr[b].f);
+	return (pr[i].f);
 }

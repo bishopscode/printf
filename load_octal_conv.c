@@ -20,7 +20,7 @@ char *load_octal_conv(char *bin, char *octal)
 		else
 			lmt = 2;
 		for (og = 0, j = 1; j <= lmt; j *= 2, i--)
-			og = ((bin[b] - '0') * k) + og;
+			og = ((bin[i] - '0') * j) + og;
 		i++;
 		octal[ioctal] = og + '0';
 	}

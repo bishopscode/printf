@@ -8,7 +8,7 @@
  * @i: index for buffer pointer
  * Return: On success 1.
  */
-int print_prog(va_list a __attribute__((unused)), char *buf, unsigned int i)
+int print_prog(va_list a __attribute__((unused)), char *buff, unsigned int i)
 {
 	com_buff(buff, '%', i);
 

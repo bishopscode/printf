@@ -4,11 +4,11 @@
  * load_binary_cov - prints decimal in binary
  * @binary: pointer to binary
  * @int_in: input number
- * @isneg: if input number is negative
+ * @isnegative: if input number is negative
  * @lmt: size of the binary
  * Return: number of chars printed.
  */
-char *load_binary_conv(char *binary, long int int_in, int isneg, int lmt)
+char *load_binary_conv(char *binary, long int int_in, int isnegative, int lmt)
 {
 	int i;
 
@@ -25,7 +25,7 @@ char *load_binary_conv(char *binary, long int int_in, int isneg, int lmt)
 	}
 	if (int_in != 0)
 		binary[i] = '1';
-	if (isneg)
+	if (isnegative)
 	{
 		for (i = 0; binary[i]; i++)
 			if (binary[i] == '0')
