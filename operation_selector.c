@@ -13,7 +13,7 @@ int (*fetch_print_func(const char *s, int index))(va_list, char *, unsigned int)
 		{"b", print_bin}, {"u", print_unt},
 		{"o", print_oct}, {"x", print_hex},
 		{"X", print_upx}, {"S", print_usr},
-		{"p", print_add}, {"li", prtlint},
+		{"p", print_addr}, {"li", prtlint},
 		{"ld", prtlint}, {"lu", prtlunt},
 		{"lo", prtloct}, {"lx", prtlhex},
 		{"lX", prtlupx}, {"hi", prthint},
