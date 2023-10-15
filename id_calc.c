@@ -6,7 +6,7 @@
  * @index: index of argument identifier.
  * Return: amount of identifiers.
  */
-int id_calc(const char *s, int index)
+int id_print_func(const char *s, int index)
 {
 	print_t pr[] = {
 		{"c", print_chr}, {"s", print_str}, {"i", print_int},
@@ -23,9 +23,9 @@ int id_calc(const char *s, int index)
 		{"+x", print_hex}, {"+X", print_upx}, {" i", prtsint},
 		{" d", prtsint}, {" u", print_unt}, {" o", print_oct},
 		{" x", print_hex}, {" X", print_upx}, {"R", print_rot},
-		{"r", print_rev}, {"%", print_prg}, {"l", print_prg},
+		{"r", print_rev}, {"%", print_prog}, {"l", print_prog},
 		{"h", print_prog}, {" +i", prtpint}, {" +d", prtpint},
-		{"+ i", prtpint}, {"+ d", prtpint}, {" %", print_prg},
+		{"+ i", prtpint}, {"+ d", prtpint}, {" %", print_prog},
 		{NULL, NULL},
 	};
 	int i = 0, j = 0, first_index;
