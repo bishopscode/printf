@@ -24,8 +24,8 @@ int prtnhex(va_list arguments, char *buff, unsigned int ibuff)
 		int_input = (int_input * -1) - 1;
 		isnegative = 1;
 	}
-	ibuf = com_buff(buff, '0', ibuff);
-	ibuf = com_buff(buff, 'x', ibuff);
+	ibuff = com_buff(buff, '0', ibuff);
+	ibuff = com_buff(buff, 'x', ibuff);
 	binary = malloc(sizeof(char) * (32 + 1));
 	binary = load_binary_conv(binary, int_input, isnegative, 32);
 	hexadecimal = malloc(sizeof(char) * (8 + 1));
