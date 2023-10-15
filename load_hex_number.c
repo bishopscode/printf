@@ -5,17 +5,17 @@
  *
  * @bin: the array that is stored in binary.
  * @hex: the array that is stored in hexadecimal.
- * @intab: integer that determines if hexadecimal array is
+ * @isupp: integer that determines if hexadecimal array is
  * in uppercase or lowercase letter.
  * @lmt: the size of hex
  * Return: binary array.
  */
-char *load_hex_number(char *bin, char *hex, int intab, int lmt)
+char *load_hex_number(char *bin, char *hex, int isupp, int lmt)
 {
 	int og, b, k, alphabet;
 
 	hex[lmt] = '\0';
-	if (intab)
+	if (isupp)
 		alphabet = 55;
 	else
 		alphabet = 87;

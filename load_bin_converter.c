@@ -8,7 +8,7 @@
  * @lmt: size of the binary
  * Return: number of chars printed.
  */
-char load_ bin_conv(char *bin, long int int_input, int isnegative, int lmt)
+char *load_ bin_conv(char *bin, long int int_input, int isnegative, int lmt)
 
 	int i;
 
