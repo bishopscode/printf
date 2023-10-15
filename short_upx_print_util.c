@@ -37,7 +37,7 @@ int prthupx(va_list arguments, char *buff, unsigned int ibuff)
 			first_digit = 1;
 		if (first_digit)
 		{
-			ibuff = conv_buff(buff, hexadecimal[i], ibuff);
+			ibuff = com_buff(buff, hexadecimal[i], ibuff);
 			count++;
 		}
 	}
