@@ -16,7 +16,7 @@ int prtnhex(va_list arguments, char *buff, unsigned int ibuff)
 	isnegative = 0;
 	if (int_input == 0)
 	{
-		ibuff = com_buf(buff, '0', ibuff);
+		ibuff = com_buff(buff, '0', ibuff);
 		return (1);
 	}
 	if (int_input < 0)
