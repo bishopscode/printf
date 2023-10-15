@@ -1,28 +1,27 @@
 #include "main.h"
 
 /**
- * prthint - prints a short integer
+ * prtpint - print integer with plus symbol
  * @arguments: input string
  * @buff: buffer pointer
  * @ibuff: index for buffer pointer
- * Return: number of chars printed.
+ * Return: number of chars printed
  */
-int prthint(va_list arguments, char *buff, unsigned int ibuff)
+int prtpint(va_list arguments, char *buff, unsigned int ibuff)
 {
-	short int int_input;
-	unsigned short int int_in, int_temp, i, div, isnegative;
+	int int_input;
+	unsigned int int_in, int_temp, i, div;
 
 	int_input = va_arg(arguments, int);
-	isnegative = 0;
 	if (int_input < 0)
 	{
 		int_in = int_input * -1;
 		ibuff = com_buff(buff, '-', ibuff);
-		isnegative = 1;
 	}
 	else
 	{
 		int_in = int_input;
+		ibuff = com_buff(buf, '+', ibuff);
 	}
 	int_temp = int_in;
 	div = 1;
@@ -35,5 +34,5 @@ int prthint(va_list arguments, char *buff, unsigned int ibuff)
 	{
 		ibuff = com_buff(buff, ((int_in / div) % 10) + '0', ibuff);
 	}
-	return (i + isnegative);
+	return (i + 1);
 }

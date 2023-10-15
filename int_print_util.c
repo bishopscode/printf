@@ -1,24 +1,24 @@
 #include "main.h"
 
 /**
- * print_int - prints an integer
+ * int_print_util - prints an integer
  * @arguments: input string
- * @buf: buffer pointer
- * @ibuf: index for buffer pointer
+ * @buff: buffer pointer
+ * @ibuff: index for buffer pointer
  * Return: number of chars printed.
  */
-int print_int(va_list arguments, char *buf, unsigned int ibuf)
+int print_int(va_list arguments, char *buff, unsigned int ibuff)
 {
 	int int_input;
-	unsigned int int_in, int_temp, i, div, isneg;
+	unsigned int int_in, int_temp, i, div, isnegative;
 
 	int_input = va_arg(arguments, int);
-	isneg = 0;
+	isnegative = 0;
 	if (int_input < 0)
 	{
 		int_in = int_input * -1;
-		ibuf = handl_buf(buf, '-', ibuf);
-		isneg = 1;
+		ibuff = com_buff(buff, '-', ibuff);
+		isnegative = 1;
 	}
 	else
 	{
@@ -36,7 +36,7 @@ int print_int(va_list arguments, char *buf, unsigned int ibuf)
 
 	for (i = 0; div > 0; div /= 10, i++)
 	{
-		ibuf = handl_buf(buf, ((int_in / div) % 10) + '0', ibuf);
+		ibuff = com_buff(buff, ((int_in / div) % 10) + '0', ibuff);
 	}
-	return (i + isneg);
+	return (i + isnegative);
 }

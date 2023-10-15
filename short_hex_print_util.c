@@ -1,14 +1,15 @@
 #include "main.h"
+
 /**
- * hex_print_util - prints a decimal in hexadecimal
+ * prthhex - prints a short decimal in hexadecimal
  * @arguments: input string
- * @buf: buffer pointer
- * @ibuf: index for buffer pointer
+ * @buff: buffer pointer
+ * @ibuff: index for buffer pointer
  * Return: number of chars printed
  */
-int print_hex(va_list arguments, char *buff, unsigned int ibuff)
+int prthhex(va_list arguments, char *buff, unsigned int ibuff)
 {
-	int int_input, i, isnegative, count, first_digit;
+	short int int_input, i, isnegative, count, first_digit;
 	char *hexadecimal, *binary;
 
 	int_input = va_arg(arguments, int);
@@ -23,17 +24,18 @@ int print_hex(va_list arguments, char *buff, unsigned int ibuff)
 		int_input = (int_input * -1) - 1;
 		isnegative = 1;
 	}
-	binary = malloc(sizeof(char) * (32 + 1));
-	binary = load_binary_conv(binary, int_input, isnegative, 32);
-	hexadecimal = malloc(sizeof(char) * (8 + 1));
-	hexadecimal = load_hex_conv(binary, hexadecimal, 0, 8);
+
+	binary = malloc(sizeof(char) * (16 + 1));
+	binary = load_binary_conv(binary, int_input, isnegative, 16);
+	hexadecimal = malloc(sizeof(char) * (4 + 1));
+	hexadecimal = load_hex_conv(binary, hexadecimal, 0, 4);
 	for (first_digit = i = count = 0; hexadecimal[i]; i++)
 	{
 		if (hexadecimal[i] != '0' && first_digit == 0)
 			first_digit = 1;
 		if (first_digit)
 		{
-			ibuff = com_buff(buff, hexadecimal[i], ibuff);
+			ibuff = conv_buff(buff, hexadecimal[i], ibuff);
 			count++;
 		}
 	}

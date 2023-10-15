@@ -33,7 +33,7 @@ int print_addr(va_list arguments, char *buff, unsigned int ibuff)
 	bin = malloc(sizeof(char) * (64 + 1));
 	bin = load_bin_conv(bin, int_input, isnegative, 64);
 	hexadecimal = malloc(sizeof(char) * (16 + 1));
-	hexadecimal = load_hex_arr(bin, hexadecimal, 0, 16);
+	hexadecimal = load_hex_conv(bin, hexadecimal, 0, 16);
 	ibuff = com_buff(buff, '0', ibuff);
 	ibuff = com_buff(buff, 'x', ibuff);
 	for (first_digit = i = count = 0; hexadecimal[i]; i++)
