@@ -36,7 +36,7 @@ int _printf(const char *format, ...)
 				}
 				else
 				{
-					len += function(arguments, buffer, ibuf);
+					len += function(arguments, buffer, ibuff);
 					i += id_print_func(format, i + 1);
 				}
 			} i++;
