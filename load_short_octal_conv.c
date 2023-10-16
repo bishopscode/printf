@@ -19,7 +19,7 @@ char *load_short_oct_conv(char *bin, char *oct)
 			lmt = 4;
 		else
 			lmt = 1;
-		for (og = 0, j = 1; j <= limit; j *= 2, i--)
+		for (og = 0, j = 1; j <= lmt; j *= 2, i--)
 			og = ((bin[i] - '0') * j) + og;
 		i++;
 		oct[ioct] = og + '0';
