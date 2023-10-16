@@ -10,15 +10,15 @@
 int prthint(va_list arguments, char *buff, unsigned int ibuff)
 {
 	short int int_input;
-	unsigned short int int_in, int_temp, i, div, isnegative;
+	unsigned short int int_in, int_temp, i, div, isneg;
 
 	int_input = va_arg(arguments, int);
-	isnegative = 0;
+	isneg = 0;
 	if (int_input < 0)
 	{
 		int_in = int_input * -1;
 		ibuff = com_buff(buff, '-', ibuff);
-		isnegative = 1;
+		isneg = 1;
 	}
 	else
 	{
@@ -35,5 +35,5 @@ int prthint(va_list arguments, char *buff, unsigned int ibuff)
 	{
 		ibuff = com_buff(buff, ((int_in / div) % 10) + '0', ibuff);
 	}
-	return (i + isnegative);
+	return (i + isneg);
 }
