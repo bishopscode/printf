@@ -28,7 +28,7 @@ int prtnoct(va_list arguments, char *buff, unsigned int ibuff)
 	binary = malloc(sizeof(char) * (32 + 1));
 	binary = load_binary_conv(binary, int_input, isnegative, 32);
 	octal = malloc(sizeof(char) * (11 + 1));
-	octal = load_octal_conv(binary, octal);
+	octal = load_oct_conv(binary, octal);
 	for (first_digit = i = count = 0; octal[i]; i++)
 	{
 		if (octal[i] != '0' && first_digit == 0)
