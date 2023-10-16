@@ -13,7 +13,7 @@ int print_addr(va_list arguments, char *buff, unsigned int ibuff)
 	void *addr;
 	long int int_input;
 	int i, count, first_digit, isnegative;
-	char *hexadecimal, *bin;
+	char *hexadecimal, *binary;
 	char nill[] = "(nil)";
 
 	addr = (va_arg(arguments, void *));
@@ -30,10 +30,10 @@ int print_addr(va_list arguments, char *buff, unsigned int ibuff)
 		int_input = (int_input * -1) - 1;
 		isnegative = 1;
 	}
-	bin = malloc(sizeof(char) * (64 + 1));
-	bin = load_binary_conv(bin, int_input, isnegative, 64);
+	binary = malloc(sizeof(char) * (64 + 1));
+	binary = load_binary_conv(bin, int_input, isnegative, 64);
 	hexadecimal = malloc(sizeof(char) * (16 + 1));
-	hexadecimal = load_hex_conv(bin, hexadecimal, 0, 16);
+	hexadecimal = load_hex_conv(binary, hexadecimal, 0, 16);
 	ibuff = com_buff(buff, '0', ibuff);
 	ibuff = com_buff(buff, 'x', ibuff);
 	for (first_digit = i = count = 0; hexadecimal[i]; i++)
@@ -46,7 +46,7 @@ int print_addr(va_list arguments, char *buff, unsigned int ibuff)
 			count++;
 		}
 	}
-	free(bin);
+	free(binary);
 	free(hexadecimal);
 	return (count + 2);
 }
