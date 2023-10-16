@@ -8,7 +8,7 @@
  *
  * Return: binary array.
  */
-char *load_oct_conv(char *bnr, char *oct)
+char *load_oct_conv(char *bin, char *oct)
 {
 	int og, i, j, ioct, lmt;
 
