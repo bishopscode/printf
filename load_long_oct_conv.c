@@ -4,7 +4,7 @@
  * load_long_oct_conv - the calculation of a long octal number
  *
  * @bin: arr where is stored the binary.
- * @octal: arr where is stored the octal.
+ * @oct: arr where is stored the octal.
  *
  * Return: bin array.
  */
