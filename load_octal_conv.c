@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * load_oct_conv - writes character c to stdout
+ * load_oct_conv - writes the character c to stdout
  *
- * @bin: the array that is stored in the binary.
- * @oct: array that is stored in the octal.
+ * @bin: array where is stored the binary.
+ * @oct: array where is stored the octal.
  *
- * Return: bin array.
+ * Return: binary array.
  */
-char *load_oct_conv(char *bin, char *octal)
+char *load_oct_conv(char *bnr, char *oct)
 {
 	int og, i, j, ioct, lmt;
 
