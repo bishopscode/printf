@@ -13,7 +13,7 @@ char *load_oct_conv(char *bin, char *octal)
 	int og, i, j, ioct, lmt;
 
 	oct[11] = '\0';
-	for (i = 31, ioctal = 10; i >= 0; i--, ioct--)
+	for (i = 31, ioct = 10; i >= 0; i--, ioct--)
 	{
 		if (i > 1)
 			lmt = 4;
