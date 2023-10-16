@@ -2,7 +2,7 @@
 
 /**
  * print_bin- prints decimal in binary
- * @arguments: input string
+ * @arguments: input str
  * @buff: buffer pointer
  * @ibuff: index for buffer pointer
  * Return: number of chars printed.
