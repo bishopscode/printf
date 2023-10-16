@@ -11,13 +11,13 @@
  */
 char *load_hex_conv(char *bin, char *hex, int isupp, int lmt)
 {
-	int og, i, j, alphabet;
+	int og, i, j, toletter;
 
 	hex[lmt] = '\0';
 	if (isupp)
-		alphabet = 55;
+		toletter = 55;
 	else
-		alphabet = 87;
+		toletter = 87;
 	for (i = (lmt * 4) - 1; i >= 0; i--)
 	{
 		for (og = 0, j = 1; j <= 8; j *= 2, i--)
@@ -26,7 +26,7 @@ char *load_hex_conv(char *bin, char *hex, int isupp, int lmt)
 		if (og < 10)
 			hex[i / 4] = og + 48;
 		else
-			hex[i / 4] = og + alphabet;
+			hex[i / 4] = og + toletter;
 	}
 	return (hex);
 }
